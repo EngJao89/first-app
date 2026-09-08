@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FirstProject</string>
+    <string name="hello_badge">First Project</string>
+    <string name="hello_label">Hello</string>
+    <string name="hello_world">World!</string>
+    <string name="hello_subtitle">Seu primeiro app já está no ar</string>
 </resources>
