@@ -5,15 +5,119 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_home_gradient"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     tools:context=".MainActivity">
 
-    <TextView
+    <View
+        android:id="@+id/orbTop"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/orb_violet"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-24dp"
+        android:layout_marginEnd="-36dp" />
+
+    <View
+        android:id="@+id/orbBottom"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/orb_pink"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="-28dp"
+        android:layout_marginBottom="48dp" />
+
+    <View
+        android:id="@+id/orbSide"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/orb_cyan"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="120dp" />
+
+    <View
+        android:id="@+id/titleGlow"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:background="@drawable/glow_title"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/hero"
+        app:layout_constraintEnd_toEndOf="@id/hero"
+        app:layout_constraintStart_toStartOf="@id/hero"
+        app:layout_constraintTop_toTopOf="@id/hero" />
+
+    <LinearLayout
+        android:id="@+id/hero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/helloBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge"
+            android:letterSpacing="0.16"
+            android:text="@string/hello_badge"
+            android:textAllCaps="true"
+            android:textColor="@color/accent_soft"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/helloLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:letterSpacing="0.28"
+            android:text="@string/hello_label"
+            android:textAllCaps="true"
+            android:textColor="@color/accent_soft"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/helloWorld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:shadowColor="#668B7CFF"
+            android:shadowDx="0"
+            android:shadowDy="8"
+            android:shadowRadius="18"
+            android:text="@string/hello_world"
+            android:textColor="@color/text_primary"
+            android:textSize="64sp" />
+
+        <View
+            android:id="@+id/accentLine"
+            android:layout_width="56dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/accent_line" />
+
+        <TextView
+            android:id="@+id/helloSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/hello_subtitle"
+            android:textColor="@color/text_muted"
+            android:textSize="16sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
